@@ -1,6 +1,8 @@
 # JSONXML-Converter-Stage2
 Hyperskill project Stage 2 implementation
 
+https://hyperskill.org/projects/61/stages/330/implement
+
 Description
 XML elements can have attributes. Attributes are designed to contain data related to a specific element or metadata.
 
