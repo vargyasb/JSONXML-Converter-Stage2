@@ -1,5 +1,6 @@
 # JSONXML-Converter-Stage2
 Hyperskill project Stage 2 implementation
+
 Description
 XML elements can have attributes. Attributes are designed to contain data related to a specific element or metadata.
 
@@ -9,6 +10,7 @@ The structure of an XML attribute is shown below:
 
 <element attribute = "value">element_content</element>
 <element attribute_1 = "value" … attribute_N = "value"/>
+
 Here are some examples of XML attributes:
 
 <request id="45692334" date = "2018-12-13"/>
@@ -16,9 +18,11 @@ Here are some examples of XML attributes:
 <project id = "5" type = "data_processing"> XML/JSON Converter </project>
  
 
-There aren’t attributes in JSON, but as we write a converter, we need a way to interpret XML attributes. Let's say that an attribute in JSON has "@attribute_name": "attribute_value" form. If the element has attributes and has a value inside, you should add #element to element content as the key. See the examples below:
+There aren’t attributes in JSON, but as we write a converter, we need a way to interpret XML attributes. Let's say that an attribute in JSON has "@attribute_name": "attribute_value" form. 
+If the element has attributes and has a value inside, you should add #element to element content as the key. See the examples below:
 
 <element attribute1 = "attribute1_value" … attributeN= "attributeN_value">content</element>
+
 This XML objects would be mapped to this JSON object:
 
 {
@@ -30,6 +34,7 @@ This XML objects would be mapped to this JSON object:
         "#element" : "content"
     }
 }
+
 But if the XML or JSON element does not contain any attributes, you should use a simple conversion like in the previous stage.
 
 In this project you should write a program that will read an XML/JSON file from disk and convert it to a JSON/XML file.
